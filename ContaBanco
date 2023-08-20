@@ -1,0 +1,28 @@
+package ContaBanco;
+
+import javafx.scene.transform.Scale;
+
+import java.util.Scanner;
+
+import java.util.Random;
+
+
+public class ContaTerminal {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Por favor, digite o número da agência sem o dígito verificador.");
+        int agencia = scan.nextInt();
+
+        System.out.println("Por favor, digite o número da conta sem o dígito verificador.");
+        int conta = scan.nextInt();
+
+        System.out.println("Por favor, digite o seu nome");
+        String nome = scan.next();
+
+        Random random = new Random();
+
+        double saldo = random.nextInt(10000);
+
+        System.out.println("Olá " + nome + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + "," + " conta " + conta + " e seu saldo de R$ " + saldo + " já está disponível para saque.");
